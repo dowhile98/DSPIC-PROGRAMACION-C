@@ -9,8 +9,8 @@
 #include "CONFIG.h"
 
 //DEFINICION DE MACROS
-#define Freq        7320000
-#define delay(x)    __delay32((Freq/1000)*x) 
+#define Freq        7370000
+#define delay_ms(x)    __delay32((Freq/1000)*x) 
 int main(void) {
     
     /*CONFIGURACION DEL RELOJ*/
@@ -27,8 +27,11 @@ int main(void) {
             
             PORTBbits.RB1 =0;
             LATBbits.LATB0 = 1;
-            delay(100);
+            delay_ms(100);
         }
-        LATBbits.LATB0 = 0;
+        else{
+            LATBbits.LATB0 = 0; // si no esta presionado lo apagas
+        }
+ 
     }
 }
