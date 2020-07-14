@@ -14,8 +14,8 @@ int main(void) {
     TIM32_Init();
     while(1){
         LATBbits.LATB9 ^=1;
-        while(!(IFS0bits.T2IF));
-        IFS0bits.T2IF = 0;
+        while(!(IFS0bits.T3IF));
+        
     }
     return 0;
 }

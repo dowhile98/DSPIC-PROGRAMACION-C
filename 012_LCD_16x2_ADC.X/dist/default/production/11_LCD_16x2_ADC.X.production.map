@@ -624,7 +624,7 @@ __RESERVED2
 
 __FGS             0xf8000a          0x2
  *(__FGS.sec*)
- __FGS.sec        0xf8000a          0x2 /CW/_FGSÐ50
+ __FGS.sec        0xf8000a          0x2 /CW/_FGSðY!
                   0xf8000a                  __FGS.sec
 
 __FICD
@@ -639,11 +639,11 @@ userdata
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x1870
+.debug_info       0x000000       0x18ac
  *(.debug_info)
- .debug_info      0x000000        0x958 build/default/production/xlcd.o
- .debug_info      0x000958        0x48c build/default/production/main_LCD_ADC.o
- .debug_info      0x000de4        0xa8c build/default/production/ADC_dsPIC30_12bit.o
+ .debug_info      0x000000        0x96c build/default/production/xlcd.o
+ .debug_info      0x00096c        0x4a0 build/default/production/main_LCD_ADC.o
+ .debug_info      0x000e0c        0xaa0 build/default/production/ADC_dsPIC30_12bit.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x32b
@@ -1396,7 +1396,7 @@ LOAD c:/program files (x86)/microchip/xc16/v1.50/bin/bin/../../lib\libm-elf.a
 LOAD c:/program files (x86)/microchip/xc16/v1.50/bin/bin/../../lib\liblega-c-elf.a
 END GROUP
 OUTPUT(dist/default/production/11_LCD_16x2_ADC.X.production.elf elf32-pic30)
-LOAD /CW/_FGSÐ50
+LOAD /CW/_FGSðY!
 LOAD jump_table
 LOAD default_isr
 LOAD data_init
